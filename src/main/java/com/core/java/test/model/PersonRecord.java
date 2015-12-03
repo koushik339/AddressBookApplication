@@ -1,16 +1,31 @@
 package com.core.java.test.model;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
+/**
+ * Creates the Model Object for PersonRecord
+ * 
+ * @author KoushikM
+ *
+ */
 public class PersonRecord {
 
 	private String name;
 	private Gender gender;
-	private Date dateOfBirth;
-	public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yy");
+	private String dateOfBirth;
 
-	public PersonRecord(String name, Gender gender, Date dateOfBirth) {
+	/**
+	 * Creates default constructor
+	 */
+	public PersonRecord() {
+	}
+
+	/**
+	 * Constructor to initialise the PersonRecord
+	 * 
+	 * @param name
+	 * @param gender
+	 * @param dateOfBirth
+	 */
+	public PersonRecord(String name, Gender gender, String dateOfBirth) {
 		super();
 		this.name = name;
 		this.gender = gender;
@@ -33,17 +48,18 @@ public class PersonRecord {
 		this.gender = gender;
 	}
 
-	public Date getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
 	@Override
 	public String toString() {
-		return "PersonRecord [name=" + name + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + "]";
+		return "PersonRecord [name=" + name + ", gender=" + gender
+				+ ", dateOfBirth=" + dateOfBirth + "]";
 	}
 
 }
